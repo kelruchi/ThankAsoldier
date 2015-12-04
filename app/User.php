@@ -13,6 +13,12 @@ class User extends Model {
         'email',
         'oauth',
         'username',
-        'profile_link',
+        'auth_token'
     ];
+
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -17,13 +17,13 @@ class CreatePostsTable extends Migration
             $table->string('post_title');
             $table->string('post_body');
             $table->string('card_type');
-            
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
+
             $table->foreign('user_id')
             ->references('id')
             ->on('users');
-            
-            $table->timestamps();
+
         });
     }
 

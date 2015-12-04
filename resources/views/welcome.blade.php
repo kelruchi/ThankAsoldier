@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/thankasoldier.css" rel="stylesheet">
+    <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/thankasoldier.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -22,7 +22,7 @@
                     </button>
                     <h3>
                         <a class=" page-scroll" href="#page-top">
-                            <img src="images/TASLOGO1.png" alt="Thank_A_Soldier_Logo" style="width:11rem;" />
+                            <img src="{{  url('images/TASLOGO1.png') }}" alt="Thank_A_Soldier_Logo" style="width:11rem;" />
                         </a>
                     </h3>
                     <!-- <a class=" page-scroll" href="#page-top">
@@ -63,28 +63,28 @@
             <div class="row-fluid">
                 <div class="col-md-3 col-xs-12">
                     <h5 style="margin-top:10px">#ThankASoldier is hosted by</h5>
-                    <img src="images/anaklelogo.png" alt="anakle_logo_thankASoldier" class="img img-responsive anakle" />
+                    <img src="{{ url('images/anaklelogo.png') }}" alt="anakle_logo_thankASoldier" class="img img-responsive anakle" />
                 </div>
 
                 <div class="col-md-9 col-xs-12">
                     <h5 style="margin-top:10px">Proudly supported by</h5>
                     <div class="col-sm-3 col-xs-6">
-                        <img src="images/andelalogo.png" alt="andela_logo_thankASoldier" class="img img-responsive partner" />
+                        <img src="{{ url('images/andelalogo.png') }}" alt="andela_logo_thankASoldier" class="img img-responsive partner" />
                     </div>
                     <div class="col-sm-3 col-xs-6" >
-                            <img src="images/swifta.png" alt="anakle_logo_thankASoldier"  class="img img-responsive partner"/>
+                            <img src="{{ url('images/swifta.png') }}" alt="anakle_logo_thankASoldier"  class="img img-responsive partner"/>
                     </div>
                     <div class="col-sm-3 col-xs-6">
-                        <img src="images/printivo_logo.png" style="background-color:#fff;" alt="anakle_logo_thankASoldier"  class="img img-responsive partner"/>
+                        <img src="{{ url('images/printivo_logo.png') }}" style="background-color:#fff;" alt="anakle_logo_thankASoldier"  class="img img-responsive partner"/>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/grayscale.js"></script>
+    <script src="{{ url('js/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ url('js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url('js/grayscale.js') }}"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->string('post_title');
             $table->string('post_body');
             $table->string('post_closing_text');
+            $table->string('card_type');
             
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')

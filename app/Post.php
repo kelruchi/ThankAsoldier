@@ -4,15 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
+class Post extends Model {
 
-    protected $table = 'users';
+    protected $table = 'posts';
     
     protected $fillable = 
     [
-        'email',
-        'oauth',
-        'username',
-        'profile_link',
+        'post_title',
+        'post_body',
+        'post_closing_text',
     ];
 }

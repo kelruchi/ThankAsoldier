@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
              $table->string('email')->nullable();
              $table->bigInteger('oauth_id');
              $table->bigInteger('auth_token');
-             $table->string('profile_link')->nullable();
              $table->timestamps();
          });
     }

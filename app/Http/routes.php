@@ -14,3 +14,19 @@
 $app->get('/', function () use ($app) {
     return view('welcome');
 });
+
+$app->post('home', [
+    'as' => 'home',
+    'uses' => 'HomeController@index',
+    'middleware' => 'auth'
+]);
+
+$app->get('login/{provider}', [
+    'uses' => 'AuthController@doSocial',
+    'as'   => 'social.login'
+]);
+
+$app->get('/key', function() {
+    return str_random(32);
+});
+

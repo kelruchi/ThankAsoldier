@@ -55,6 +55,7 @@
     <section class="content-section">
         <div class="container-fluid">
             <div class="row-fluid">
+                <input type="button" class="btn btn-primary" id="share-button" value="Share">
             </div>
         </div>
     </section>
@@ -86,5 +87,6 @@
     <script src="{{ url('js/bootstrap.min.js') }}"></script>
     <script src="{{ url('js/jquery.easing.min.js') }}"></script>
     <script src="{{ url('js/grayscale.js') }}"></script>
+    <script src="{{ url('js/facebook.js') }}"></script>
 </body>
 </html>

@@ -3,16 +3,11 @@
  */
 $(document).ready(function(){
     initFacebook();
-
     $('#share-button').on('click', function(){
         console.log('button clicked');
-
         facebookLogin();
-    })
-
-
+    });
 })(JQuery);
-
 
 function facebookLogin()
 {

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -18,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->string('user_message');
             $table->string('card_image');
             $table->timestamps();
+
         });
     }
 

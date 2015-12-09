@@ -55,13 +55,13 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//     // Illuminate\Cookie\Middleware\EncryptCookies::class,
-//     // Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-//     // Illuminate\Session\Middleware\StartSession::class,
-//     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
-//     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
-// ]);
+ $app->middleware([
+      Illuminate\Cookie\Middleware\EncryptCookies::class,
+      Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+      Illuminate\Session\Middleware\StartSession::class,
+     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
+     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
+ ]);
 
 // $app->routeMiddleware([
 
@@ -78,7 +78,10 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+class_alias(Laravel\Socialite\Facades\Socialite::class, 'Socialite');
+
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(Laravel\Socialite\SocialiteServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*

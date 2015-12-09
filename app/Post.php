@@ -12,6 +12,12 @@ class Post extends Model {
     [
         'post_title',
         'post_body',
-        'post_closing_text',
+        'card_type',
     ];
+
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

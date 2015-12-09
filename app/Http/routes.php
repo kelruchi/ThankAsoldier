@@ -14,3 +14,9 @@
 $app->get('/', function () use ($app) {
     return view('welcome');
 });
+
+$app->get('/test', 'HomeController@test');
+
+$app->get('/key', function() {
+    return str_random(32);
+});

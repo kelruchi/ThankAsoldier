@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('username');
             $table->string('user_message');
-            $table->string('card_image');
+            $table->longText('card_image');
             $table->timestamps();
 
         });

@@ -5,15 +5,28 @@ $(document).ready(function(){
     initFacebook();
     $('#share-button').on('click', function(){
         console.log('button clicked');
-        facebookLogin();
+        var message = $('#message-filed').val();
+        var image = $('#image-field').val();
+        var username = $('#name').val();
+
+        facebookLogin(image, message);
     });
 })(JQuery);
 
-function facebookLogin()
+function facebookLogin(image, message)
 {
+    var wallPost = {
+        message: message,
+        picture: image;
+    }
+
     FB.login(
         function(){
-            FB.api('/me/feed', 'post', {message: 'Hello, World!'});
+            FB.api('/me/feed', 'post', wallPost, function(response){
+                if (response && !response.error) {
+                    //send details to back end
+                }
+            });
         },
         {
             scope: 'publish_actions'

@@ -8,16 +8,10 @@ class Post extends Model {
 
     protected $table = 'posts';
     
-    protected $fillable = 
-    [
-        'post_title',
-        'post_body',
-        'card_type',
+    protected $fillable = [
+        'username',
+        'user_message',
+        'card_image',
     ];
 
-
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
 }

@@ -17,8 +17,8 @@ function facebookLogin(image, message)
 {
     var wallPost = {
         message: message,
-        picture: image;
-    }
+        picture: image
+    };
 
     FB.login(
         function(){
